@@ -1,0 +1,26 @@
+  
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+ <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{employee.fullName}}">
+          <div class="text-danger">
+            {{employee.fullNameError}}
+          </div>
+    </div>  
+    <div class="form-group">
+        <label>Emp Salary</label>
+        <input type="number" class="form-control" name="empsalary" placeholder="Employee Salary" value="{{employee.salary}}">
+    </div> 
+    <div class="form-group">
+        <label>Emp Date of Birth</label>
+        <input type="date" class="form-control" name="empdob" placeholder="Date of Birth" value="{{employee.age}}">
+    </div>  
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div> 
+    
+</form>
